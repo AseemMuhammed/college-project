@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chroma-js@2.1.1/chroma.min.js"></script>
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+
+<body>
+    <section id="about">
+        <div class="wrapper">
+            <header class="header">
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="index">
+                            <span>Zeptune</span>
+                        </a>
+
+                    </div>
+                    <div class="nav">
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="{% url 'web:index' %}" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'web:index' %}" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'web:working' %}" class="nav-link">Working</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login">
+                        <form action="{% url 'web:logout' %}" method="post">
+                            {% csrf_token %}
+                            <button class="glow-button" type="submit">
+                                <span>Logout</span>
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+                <div class="underline">
+
+                </div>
+            </header>
+            <div class="container">
+                <div class="about-left">
+                    <h1><span>01</span> Open about</h1>
+                    <div class="image-container">
+                        <img src="{% static 'images/finger_three.png' %}" alt="">
+                    </div>
+                </div>
+                <div class=" about-right">
+                    <p>Welcome to Zeptune!! Revolutionizing shared listening experiences, we offer an
+                        innovative solution for effortless volume management. Our platform ensures harmonious
+                        interactions, allowing guests to control audio levels seamlessly. Say goodbye to disruptions and
+                        hello to enhanced ambiance with Guesters. Join us in shaping the future of communal audio
+                        enjoyment!
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class=" about-right">
+                    <p>The user performs a hand gesture, such as a pinch in and pinch out, while watching a video. This
+                        gesture serves as an input signal for controlling the volume.
+                        Gesture Detection:
+
+                        The system utilizes sensors or cameras to detect the hand gesture in real-time. These sensors
+                        capture the spatial movements and positions of the user's hand.
+                    </p>
+                </div>
+                <div class="about-left even">
+                    <h1><span>02</span> Gesture Input:</h1>
+                    <div class="image-container">
+                        <img src="{% static 'images/women-one.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="about-left">
+                    <h1><span>03</span> Gesture Recognition:</h1>
+                    <div class="image-container">
+                        <img src="{% static 'images/women-two.png' %}" alt="">
+                    </div>
+                </div>
+                <div class=" about-right">
+                    <p>Once detected, the system applies gesture recognition algorithms to interpret the hand gesture.
+                        This involves analyzing the direction, speed, and intensity of the gesture to determine the
+                        intended volume control action.
+                        Volume Adjustment:
+
+                        Based on the recognized gesture, the system adjusts the audio volume accordingly. For example, a
+                        pinch out gesture may trigger an increase in volume, while a pinch in gesture may
+                        trigger a decrease.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class=" about-right">
+                    <p>The system continues to monitor for additional gestures, allowing users to adjust the volume
+                        seamlessly throughout the video playback experience. After detecting and interpreting the
+                        initial
+                        hand gesture for volume control, the Zeptune system continues to actively monitor for additional
+                        gestures throughout the video playback session.
+                        This continuous monitoring ensures that users can adjust the volume as needed at any point
+                        during the video playback experience, providing a seamless and responsive interaction.
+                    </p>
+                </div>
+                <div class="about-left even">
+                    <h1><span>04</span> Continue Monitoring</h1>
+                    <div class="image-container">
+                        <img src="{% static 'images/gesture-one.png'   %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="text">
+            <h1>The future of your hand gestures <span>starts here</span></h1>
+            <button class="glow-button">
+                <a href="index">
+                    <span>Explore</span></a>
+            </button>
+        </div>
+        <div class="underline">
+        </div>
+        <div class="bottom">
+            <div class="text-bottom">
+                <span class="copyright">Copyright © 2024 Scale AI, Inc. All rights reserved.</span>
+            </div>
+            <div class="icons">
+                <div class="items"><a href="https://www.instagram.com/"><img src="{% static 'images/instagram.svg' %}"
+                            alt="icon"></a></div>
+
+                <div class="items"><a href="https://www.facebook.com/"><img src="{% static 'images/facebook.svg' %}"
+                            alt="icon"></a>
+                </div>
+
+                <div class="items"><a href="https://www.linkedin.com/"><img src="{% static 'images/linkedin.svg' %}"
+                            alt="icon"></a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
